@@ -40,7 +40,6 @@ class UserController extends BaseController
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
-
         $response = $this->actionAfterSubmit($form, $user, 'user_index');
         if ($response) {
             return $response;
@@ -64,7 +63,6 @@ class UserController extends BaseController
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
-
         $response = $this->actionAfterSubmit($form, $user, 'user_index');
         if ($response) {
             return $response;
