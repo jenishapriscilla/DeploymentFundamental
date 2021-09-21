@@ -12,7 +12,6 @@ class BaseController extends AbstractController
     {
         if ($form->isSubmitted() && $form->isValid()) {
             $this->databaseActivity($entity);
-
             return $this->redirectRoute($route);
         }
     }
