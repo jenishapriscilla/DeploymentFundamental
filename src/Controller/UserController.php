@@ -28,7 +28,6 @@ class UserController extends BaseController
     public function index(): Response
     {
         $users = $this->userService->listAll();
-
         return $this->renderTemplate('user/index.html.twig', ['users' => $users]);
     }
 
