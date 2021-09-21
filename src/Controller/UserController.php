@@ -77,7 +77,6 @@ class UserController extends BaseController
     public function delete(User $user): Response
     {
         $this->deleteEntity($user);
-
         return $this->redirectRoute('user_index');
     }
 }
