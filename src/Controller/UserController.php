@@ -67,7 +67,6 @@ class UserController extends BaseController
         if ($response) {
             return $response;
         }
-
         return $this->renderFormTemplate('user/edit.html.twig', ['user' => $user, 'form' => $form]);
     }
 
