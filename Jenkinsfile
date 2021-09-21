@@ -1,17 +1,15 @@
-stage('Deploy in Test env') {
-            when {
-                branch 'test'
-            }            
-        steps {
-                sh "kubectl apply -f deployment.yaml"
+pipeline {
+    agent any
+    stages  {
+        stage('Test') {
+            step {
+                sh 'echo "Testing application"'
             }
         }
-
-        stage('Deploy in Prod env') {
-            when {
-                branch 'prod'
-            }
-            steps {
-                sh "kubectl apply -f deployment.yaml"
+        stage('Deploy') {
+            step {
+                sh 'echo "Deploying application"'
             }
         }
+    }
+}
